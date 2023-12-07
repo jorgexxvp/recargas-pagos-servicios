@@ -18,7 +18,7 @@ export default defineConfig({
       },
       '/getProviders': {
         target: 'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
-        changeOrigin: true,
+        changeOrigin: true
       },
     },
   },
