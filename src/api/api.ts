@@ -4,7 +4,7 @@ import { useAuthStore } from '../stores/authStore';
 import { router } from '../router';
 
 const api = axios.create({
-  baseURL: process.env.VUE_APP_URL_API,
+  baseURL: "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com",
   headers: {
     "Content-Type": "application/json",
   },
