@@ -23,7 +23,7 @@ const mocksCard = [{ name: "Netflix", image: NetflixIcon }, { name: "Paysafecard
     <div class="p-[15px]">
       <p class="text-[11px] font-[700]">Buscar Empresa</p>
       <div class="pb-[15px] relative">
-        <input class="flex relative  p-[3px] font-[500] px-[15px] w-[100%] h-[60px] items-center gap-[5px] bg-gray-100" placeholder="ej. Culqui"/>
+        <input class="flex relative  p-[3px] font-[500] px-[15px] w-screen h-[60px] items-center gap-[5px] bg-gray-100" placeholder="ej. Culqui"/>
         <img src="../assets/svg/magnifyingGlass.svg" class="w-[25px] h-[25px] absolute top-[18px] right-[20px]" alt="MGlass">
       </div>
       

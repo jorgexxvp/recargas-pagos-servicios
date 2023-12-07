@@ -7,7 +7,9 @@ import SmartphoneIcon from '../assets/svg/smartphone.svg'
 import LightbulbIcon from '../assets/svg/lightbulb.svg'
 import ScheduleIcon from '../assets/svg/schedule.svg'
 
-const mocksCard = [{ name: "Recargas", image: SmartphoneIcon }, { name: "Pago de servicios" ,image: LightbulbIcon}, { name: "Historial de ganancias y operaciones", image: ScheduleIcon }];
+const mocksCard = [{ name: "Recargas", image: SmartphoneIcon ,url:'/recharges' }, 
+{ name: "Pago de servicios" ,image: LightbulbIcon, url:''}, 
+{ name: "Historial de ganancias y operaciones", image: ScheduleIcon ,url:''}];
 
 const title = "Recargas y pagos"
 </script>
@@ -31,10 +33,10 @@ const title = "Recargas y pagos"
         <p class="text-sm">Codigo para cargar tu saldo: </p>
         
       </div>
-      <div class="bg-gray-200 w-[100%] h-[1px] mb-5 mt-3"></div>
+      <div class="bg-gray-200 w-screen h-[1px] mb-5 mt-3"></div>
 
       <div class="flex flex-col gap-5">
-        <ButtonOption v-for="data in mocksCard" :text="data.name" :key="data.name" :logo="data.image" />
+        <ButtonOption v-for="data in mocksCard" :text="data.name" :key="data.name" :logo="data.image" :url="data.url" />
       </div>
       
     </div>

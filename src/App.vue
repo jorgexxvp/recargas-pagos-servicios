@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import RechargesPayments from './pages/RechargesPayments.vue';
 
 
 </script>
 
 <template>
-  <RechargesPayments/>
+    <router-view></router-view>
 </template>
 
 <style scoped>

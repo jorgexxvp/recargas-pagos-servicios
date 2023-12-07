@@ -8,4 +8,7 @@ export default defineConfig({
     vue(), 
     VitePWA({ registerType: 'autoUpdate' })
   ],
+  server: {
+    port: 3000,
+  },
 })

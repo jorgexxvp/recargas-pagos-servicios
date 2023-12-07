@@ -13,9 +13,9 @@
 
 <template>
   <div class="flex flex-row items-center p-4 bg-gray-191919 rounded-b-2xl relative top-0">
-    <a href="#" target="_blank" class="flex absolute">
+    <router-link to="/">
       <img src="../assets/svg/back.svg" alt="BackIcon" class="w-6 h-6" />
-    </a>
+    </router-link>
     <p class="mx-auto text-white">{{ props.name }} </p>
   </div>
 </template>
