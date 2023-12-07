@@ -2,13 +2,13 @@
   "version": 2,
   "functions": {
     "api/proxy": {
-      "handler": "./proxy.ts"
+      "runtime": "vercel-node@0.5.0",
+      "maxDuration": 10
     }
   },
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/getActualBalance", "dest": "./proxy.ts" },
-    { "src": "/getProviders", "dest": "./proxy.ts" },
+    { "src": "/getActualBalance", "dest": "api/proxy" },
+    { "src": "/getProviders", "dest": "api/proxy" },
     { "src": ".*", "dest": "/index.html" }
   ]
 }
