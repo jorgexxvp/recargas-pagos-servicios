@@ -7,17 +7,17 @@ import Login from '../view/Login.vue';
 const routes: RouteRecordRaw[] =[
   {
     path:'/',
-    name : 'Login',
+    name : 'login',
     component: Login
   },
   {
     path:'/recharges',
-    name : 'Recharges',
+    name : 'recharges',
     component: Recharges
   },
   {
-    path:'/',
-    name : 'Menu',
+    path:'/rechargesPayments',
+    name : 'rechargesPayments',
     component: RechargesPayments
   },
   {
