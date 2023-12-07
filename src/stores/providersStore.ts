@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { ref ,onMounted } from 'vue';
+import { ref } from 'vue';
 import { APIResponse, ICompany } from '../api/types';
 import { API } from '../api/controller';
 import { AxiosError } from 'axios';
