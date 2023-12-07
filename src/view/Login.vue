@@ -1,13 +1,24 @@
 <script setup lang="ts">
 import { useAuthStore } from '../stores/authStore';
 import { ref } from 'vue';
+import { useProvidersStore } from '../stores/providersStore';
+import { useRouter } from 'vue-router';
 
 const auth = useAuthStore();
 const token = ref(auth.token);
+const router = useRouter();
 
-const handleAccess = () => {
+const providerData = useProvidersStore();
+const handleAccess = async () => {
   auth.setToken(token.value);
+  const { status } = await providerData.dispatchGetProviders();
+  console.log(auth.token)
+  if (String(status) === "200") {
+    router.push('/rechargesPayments');
+  }
+
 };
+
 </script>
 
 <template>
