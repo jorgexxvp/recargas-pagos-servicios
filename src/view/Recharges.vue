@@ -32,7 +32,6 @@ onMounted(async () => {
 
 
 
-console.log("wqasDFSDFSDF",)
 
 </script>
 

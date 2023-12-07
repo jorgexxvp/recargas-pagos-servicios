@@ -14,7 +14,7 @@ const api = axios.create({
 api.interceptors.request.use((config) => {
   const data = useAuthStore();
   if (data.token) {
-    console.log(data.token);
+
     config.headers.Authorization = `Bearer ${data.token}`;
   }
   useAuthStore().setLoading(true);
@@ -33,7 +33,6 @@ api.interceptors.response.use(
       if (router.currentRoute.value.path !== './') {
         useAuthStore().setLoading(true);
         useAuthStore().setToken(null);     
-        console.log('')         
       }
     }
 

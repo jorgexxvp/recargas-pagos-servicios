@@ -12,7 +12,6 @@ const providerData = useProvidersStore();
 const handleAccess = async () => {
   auth.setToken(token.value);
   const { status } = await providerData.dispatchGetProviders();
-  console.log(auth.token)
   if (String(status) === "200") {
     router.push('/rechargesPayments');
   }

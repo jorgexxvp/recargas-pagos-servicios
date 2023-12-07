@@ -6,14 +6,12 @@ const props = defineProps<{
   name: string
   logo: string
 }>()
-const data = () => {
-  console.log("name", props.name, "logo", props.logo)
-}
+
 
 </script>
 
 <template>
-  <div @click="data" class="flex flex-row items-center p-4 relative top-0 justify-between border-b-[2px]">
+  <div class="flex flex-row items-center p-4 relative top-0 justify-between border-b-[2px]">
     <div class="flex flex-row items-center gap-[10px]">
       <img :src=props.logo alt="BackIcon" class="w-[32px] h-[32px]" />
       <p class="mx-auto">{{ props.name }} </p>
