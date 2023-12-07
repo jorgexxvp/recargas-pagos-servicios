@@ -1,20 +1,20 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { APIResponse, ICompanies } from '../api/types';
+import { APIResponse, ISaldo } from '../api/types';
 import { API } from '../api/controller';
 import { AxiosError } from 'axios';
 
 
-export const useProvidersStore = defineStore("providers", () => {
-  const companies = ref<ICompanies>();
+export const useBalanceStore = defineStore("balance", () => {
+  const balance = ref<ISaldo>();
   
-  function initData(data: ICompanies) {
-    companies.value = data;
+  function initData(data: ISaldo) {
+    balance.value = data;
   }
 
-  async function dispatchGetProviders(): Promise<APIResponse<null>> {
+  async function dispatchGetBalance(): Promise<APIResponse<null>> {
     try {
-      const data = await API.provider.getProvider();
+      const data = await API.provider.getSaldo();
       if (data.status === 200) {
         initData(data.data.data);
         return {
@@ -39,8 +39,8 @@ export const useProvidersStore = defineStore("providers", () => {
   }
 
   return {
-    companies,
+    balance,
     initData,
-    dispatchGetProviders
+    dispatchGetBalance
   };
 });

@@ -6,13 +6,24 @@ import ButtonOption from '../components/ButtonOption.vue';
 import SmartphoneIcon from '../assets/svg/smartphone.svg'
 import LightbulbIcon from '../assets/svg/lightbulb.svg'
 import ScheduleIcon from '../assets/svg/schedule.svg'
+import { useBalanceStore } from '../stores/balanceStore';
+import { onMounted, ref } from 'vue';
 
 const mocksCard = [{ name: "Recargas", image: SmartphoneIcon, url: '/recharges' },
 { name: "Pago de servicios", image: LightbulbIcon, url: '' },
 { name: "Historial de ganancias y operaciones", image: ScheduleIcon, url: '' }];
+const saldoData = useBalanceStore()
+const isLoading = ref(true);
+
+
+onMounted(async () => {
+  await saldoData.dispatchGetBalance();
+  isLoading.value = false;
+});
 
 const title = "Recargas y pagos"
 </script>
+
 
 <template>
   <div>
@@ -25,7 +36,8 @@ const title = "Recargas y pagos"
         </div>
         <div>
           <div class="flex flex-row items-center gap-3 mb-1">
-            <p class="text-3xl font-bold">S/150.00</p>
+            <p v-if="isLoading">Cargando...</p>
+            <p v-else class="text-3xl font-bold">{{ saldoData.balance?.balanceCommerce }}</p>
             <img src="../assets/svg/reload.svg" class="w-5 h-5" />
           </div>
           <Button text="¿Como cargar mi salgo virtual?" :img=HeartIcon />

@@ -8,7 +8,6 @@ const props = defineProps<{
 }>()
 const data = () => {
   console.log("name", props.name, "logo", props.logo)
-
 }
 
 </script>

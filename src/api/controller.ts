@@ -1,4 +1,4 @@
-import apiProviderController from "./apiProvider";
+import apiProviderController from "./apiServer";
 
 export const API = {
   provider: apiProviderController,

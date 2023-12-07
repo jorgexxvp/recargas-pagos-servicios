@@ -16,8 +16,8 @@ const handleAccess = async () => {
   if (String(status) === "200") {
     router.push('/rechargesPayments');
   }
-
 };
+
 
 </script>
 

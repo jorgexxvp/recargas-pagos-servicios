@@ -5,11 +5,15 @@ export type APIResponse<T> = {
 }
 
 export interface ICompanies {
-  company: ICompany[];
+  companies: ICompany[];
 }
 
 export interface ICompany {
   company: string;
   _id: string;
   image: string;
+}
+
+export interface ISaldo{
+  balanceCommerce: string
 }

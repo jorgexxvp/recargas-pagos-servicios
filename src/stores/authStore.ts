@@ -15,8 +15,8 @@ export const useAuthStore = defineStore('app', {
       this.token = token;
       localStorage.setItem('token', token || '');
     },
-    setLoading(loading: boolean) {
-      this.loading = loading;
+    setLoading(valor: boolean) {
+      this.loading = valor;
     },
   },
 });
