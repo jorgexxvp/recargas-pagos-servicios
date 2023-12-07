@@ -13,7 +13,7 @@ const api = axios.create({
 api.interceptors.request.use((config) => {
   const data = useAuthStore();
   if (data.token) {
-    console.log("asfasdf",data.token);
+    console.log(data.token);
     config.headers.Authorization = `Bearer ${data.token}`;
   }
   useAuthStore().setLoading(true);

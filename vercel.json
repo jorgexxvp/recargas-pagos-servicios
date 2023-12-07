@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "api/proxy": {
+      "handler": "./proxy.ts"
+    }
+  },
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/getActualBalance", "dest": "./proxy.ts" },
+    { "src": "/getProviders", "dest": "./proxy.ts" },
+    { "src": ".*", "dest": "/index.html" }
+  ]
+}
