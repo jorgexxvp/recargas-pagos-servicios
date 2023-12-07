@@ -4,7 +4,7 @@ import { useAuthStore } from '../stores/authStore';
 import { router } from '../router';
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: process.env.VUE_APP_URL_API,
   headers: {
     "Content-Type": "application/json",
   },
