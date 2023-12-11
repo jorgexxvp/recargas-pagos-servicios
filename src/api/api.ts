@@ -3,7 +3,7 @@ import { useAuthStore } from '../stores/authStore';
 import { router } from '../router';
 
 const api = axios.create({
-  baseURL: "api",
+  baseURL: "https://aspexpressapi-production.up.railway.app",
   headers: {
     "Content-Type": "application/json",
   },
