@@ -9,7 +9,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <router-link to="/recharges">
+  <router-link :to="url">
     <button
       class="flex text-[17px] p-[5px] px-[12px] rounded-[5px] bg-gray-100 items-center gap-[20px] w-[100%] h-16 relative ">
       <figure
