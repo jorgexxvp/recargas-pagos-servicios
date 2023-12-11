@@ -15,7 +15,6 @@ const mocksButton = [
   { name: "Telefonía", image: PhoneIcon }
 ];
 const providerData = useProvidersStore();
-
 const filteredCompanies = ref(providerData.companies?.companies || []);
 const filterByName = (name: string) => {
   filteredCompanies.value = providerData.companies?.companies?.filter(company =>
@@ -29,9 +28,6 @@ onMounted(async () => {
   filteredCompanies.value = providerData.companies?.companies || [];
 
 });
-
-
-
 
 </script>
 
