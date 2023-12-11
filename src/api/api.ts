@@ -3,7 +3,7 @@ import { useAuthStore } from '../stores/authStore';
 import { router } from '../router';
 
 const api = axios.create({
-  baseURL: "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com",
+  baseURL: "api",
   headers: {
     "Content-Type": "application/json",
   },
