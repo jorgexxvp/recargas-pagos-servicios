@@ -3,7 +3,7 @@ import { useAuthStore } from '../stores/authStore';
 import { router } from '../router';
 
 const api = axios.create({
-  baseURL: "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com/",
+  baseURL: "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com",
   headers: {
     "Content-Type": "application/json",
   },
@@ -12,7 +12,9 @@ const api = axios.create({
 api.interceptors.request.use((config) => {
   const data = useAuthStore();
   if (data.token) {
-
+    config.headers['Access-Control-Allow-Headers'] = '*';
+    config.headers['Access-Control-Allow-Methods'] = '*';
+    config.headers['Access-Control-Exposed-Headers'] = '*';
     config.headers.Authorization = `Bearer ${data.token}`;
   }
   useAuthStore().setLoading(true);
