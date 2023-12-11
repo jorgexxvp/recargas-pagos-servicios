@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 
 
-//Props
 const props = defineProps<{
   name: string
   logo: string

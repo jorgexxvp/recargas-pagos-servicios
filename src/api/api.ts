@@ -1,11 +1,9 @@
-
-// axios-config.ts
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { useAuthStore } from '../stores/authStore';
 import { router } from '../router';
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com/",
   headers: {
     "Content-Type": "application/json",
   },
@@ -28,7 +26,6 @@ api.interceptors.response.use(
     return response;
   },
   (error: AxiosError) => {
-
     if (error.response?.status === 401) {
       if (router.currentRoute.value.path !== './') {
         useAuthStore().setLoading(true);

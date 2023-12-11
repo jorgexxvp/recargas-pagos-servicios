@@ -8,20 +8,20 @@ export default defineConfig({
     vue(),
     VitePWA({ registerType: 'autoUpdate' })
   ],
-  server: {
-    port: 3000,
-    proxy: {
-      '/getActualBalance': {
-        target: 'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
-        changeOrigin: true,
+  // server: {
+  //   port: 3000,
+  //   proxy: {
+  //     '/getActualBalance': {
+  //       target: 'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
+  //       changeOrigin: true,
 
-      },
-      '/getProviders': {
-        target: 'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
-        changeOrigin: true
-      },
-    },
-  },
+  //     },
+  //     '/getProviders': {
+  //       target: 'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
+  //       changeOrigin: true
+  //     },
+  //   },
+  // },
   
 
 });

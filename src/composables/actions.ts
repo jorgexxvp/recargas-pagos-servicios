@@ -6,7 +6,6 @@ export const useApi = () => {
     try {
       const response = await api.get('/getActualBalance');
       const valor = response.data;
-      // Puedes hacer algo con `valor` si es necesario
       return valor;
     } catch (error) {
       console.error('Error al obtener el balance:', error);
