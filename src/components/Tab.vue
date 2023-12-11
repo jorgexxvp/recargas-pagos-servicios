@@ -13,7 +13,7 @@ const emits = defineEmits<{
 <template>
   <div class="flex flex-row items-center p-4 bg-gray-191919 rounded-b-2xl relative top-0">
     <router-link to="/RechargesPayments">
-      <img src="../assets/svg/back.svg" alt="BackIcon" class="w-6 h-6" />
+      <img src="../assets/svg/back.svg" alt="BackIcon" class="w-6 h-6 absolute top-[17px] left-[10px]" />
     </router-link>
     <p class="mx-auto text-white">{{ props.name }} </p>
   </div>
