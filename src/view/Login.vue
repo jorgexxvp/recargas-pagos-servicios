@@ -3,15 +3,20 @@ import { useAuthStore } from '../stores/authStore';
 import { ref } from 'vue';
 import { useProvidersStore } from '../stores/providersStore';
 import { useRouter } from 'vue-router';
+import { useBalanceStore } from '../stores/balanceStore';
 
 const auth = useAuthStore();
 const token = ref(auth.token);
 const router = useRouter();
 
 const providerData = useProvidersStore();
+const balanceData = useBalanceStore();
+
 const handleAccess = async () => {
   auth.setToken(token.value);
   const { status } = await providerData.dispatchGetProviders();
+  await balanceData.dispatchGetBalance();
+
   if (String(status) === "200") {
     router.push('/rechargesPayments');
   }
