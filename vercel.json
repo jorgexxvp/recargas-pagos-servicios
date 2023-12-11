@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/getProviders",
+      "destination": "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com/getProviders"
+    },
+    {
+      "source": "/getActualBalance",
+      "destination": "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com/getActualBalance"
+    }
+  ]
+}
