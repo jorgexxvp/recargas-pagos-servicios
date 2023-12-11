@@ -2,10 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com/:path*",
-      "headers": {
-        "Host": "bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com"
-      }
+      "destination": "http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com/:path*"
     }
   ]
 }
